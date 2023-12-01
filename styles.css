@@ -52,6 +52,12 @@ table {
 
 body{
     font-size: 18px;
+    
+}
+
+a {
+  text-decoration: none;  
+  color: white;
 }
 
 header {
@@ -127,6 +133,7 @@ input[type=search] {
     background-color: #1e40af;
     display: grid;
     grid-template-rows: 1fr 3fr 3fr;
+
 }
 
 .invertIcon {

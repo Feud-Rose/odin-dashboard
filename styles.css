@@ -208,4 +208,21 @@ input[type=search] {
     border-style: solid;
     border-color: black;
     border-width: 5px;
+    
+}
+
+h3 {
+    font-size: 30px;
+    margin:15px
+
+}
+
+.fakeTwitter {
+    margin-left: 10px;
+    display: grid;
+    grid-template-rows: repeat(4, 25%);}
+
+.twitUsers a {
+    color: black;
+    
 }

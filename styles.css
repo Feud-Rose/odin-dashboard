@@ -34,8 +34,9 @@ body {
     font-family: 'Cabin',sans-serif;
 	line-height: 1;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: clamp(225px, 20%, 250px) 1fr;
     grid-template-rows: min(15%, 150px) 5fr;
+    
 }
 ol, ul {
 	list-style: none;
@@ -56,6 +57,7 @@ table {
 body { 
     min-height: 100vh; 
     font-size: 18px;
+    
 }
 
 a {
@@ -76,6 +78,7 @@ header {
 
 header div {
     display:grid;
+    
 }
 
 .search {
@@ -182,8 +185,9 @@ input[type=search] {
     grid-area: 1 / 1 / 3 / 2;
     background-color: #1e40af;
     display: grid;
-    grid-template-rows: 1fr 3fr 3fr;
-
+    grid-template-rows: 100px 300px 200px;
+    min-width: 225px;
+    
 }
 
 .invertIcon {
@@ -195,6 +199,8 @@ input[type=search] {
     display:grid;
     grid-template-columns: 50px 1fr;
     max-height: 50px;
+    margin-top: 15px;
+    margin-left: 15px;
 }
 
 .logo img {
@@ -210,15 +216,24 @@ input[type=search] {
 .sideBar ul {
     display: grid;
     grid-template-rows: repeat(auto-fill, 30px);
-    margin-left: 15px;
+    margin-left: 25px;
+}
+.navigation1 img, .navigation2 img {
+    padding-right: 8px;
 }
 
 .navigation1 {
     grid-row: 2/3;
+    padding: 16px;
+    gap: 15px;
+    font-size: 22px;
 }
 
 .navigation2 {
     grid-row: 3/4;
+    padding: 16px;
+    font-size: 22px;
+    gap: 15px;
 }
 
 .main {
@@ -228,6 +243,7 @@ input[type=search] {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding-top: 15px;
+    overflow: hidden;
 }
 
 .projects {
@@ -237,16 +253,44 @@ input[type=search] {
     grid-template-columns: 1fr 1fr;
     padding: 15px;
     gap: 15px;
+    min-width: 800px;
+    
 }
 
 .projectCards {
     background-color: #f5f6f8;
     margin: auto;
-    width: max(350px, 40%);
-    height: max(250px, 40%);
-    box-shadow: 5px 5px 5px #1e40af;
+    max-width: 375px;
+    min-height: 230px;
+    max-height: 230px;
+    box-shadow: 5px 5px 5px #1e40af, inset 12px 6px 15px -8px #2f2f79;
     padding-left: 16px;
     padding-right: 16px;
+    display: grid;
+    grid-template-rows: 50px 150px 30px;
+    
+}
+
+.projectCards h3 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.projectCards p {
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.projectCards div {
+ justify-content: end;
+ display: flex;
+ align-self: flex-end;
+ margin-bottom: 8px;
+}
+.projectCards div a {
+margin:5px;
 }
 
 .announcements {
@@ -257,6 +301,8 @@ input[type=search] {
     height: 80%;
     box-shadow: 5px 5px 5px #1e40af;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 .announcements div{
     max-height: 25%;
@@ -276,7 +322,7 @@ input[type=search] {
     font-size: 14px;
     padding-bottom: 8px;
     margin-left: 25px;
-    width: 200px;
+    max-width: 200px;
     overflow: hidden;
     text-overflow: clip;
     max-height: 48px;
@@ -297,6 +343,8 @@ input[type=search] {
     min-height: 350px;
     margin: auto;
     box-shadow: 5px 5px 5px #1e40af;
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
@@ -306,7 +354,7 @@ h3 {
 }
 
 .fakeTwitter {
-    margin-left: 10px;
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
     
@@ -329,15 +377,31 @@ h3 {
     max-height: 35%;
     margin-left: 5px;
     text-align: center;
-    position: relative;
-    right: 15%;
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.twitUsers p{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    text-align: left;
+    font-size: 14px;
+    
+}
+
+.twitUsers h5 {
+    text-align: left;
 }
 
 .twitUsersImg {
-max-height: 30%;
-max-width: 30%;
+max-height: 50px;
+max-width: 50px;
+
 }
 
 .twitUsers a{
     color: black;
+    grid-row: 1/4
 }

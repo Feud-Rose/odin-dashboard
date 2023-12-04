@@ -239,7 +239,7 @@ input[type=search] {
     gap: 15px;
 }
 
-.projects div {
+.projectCards {
     background-color: #f5f6f8;
     margin: auto;
     width: max(350px, 40%);
@@ -257,6 +257,35 @@ input[type=search] {
     height: 80%;
     box-shadow: 5px 5px 5px #1e40af;
     margin: auto;
+}
+.announcements div{
+    max-height: 25%;
+}
+
+
+.announcements h4 {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.announcementText {
+    
+    font-size: 14px;
+    padding-bottom: 8px;
+    margin-left: 25px;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: clip;
+    max-height: 48px;
+    margin-right: 25px;
+}
+
+.announcements hr {
+
+    width: 70%
 }
 
 .trending {
